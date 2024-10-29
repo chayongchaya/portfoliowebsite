@@ -1,0 +1,333 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* พื้นหลังสีอ่อน */
+}
+
+header {
+    background: #0056b3; /* สีน้ำเงินเข้ม */
+    color: white;
+    padding: 60px 0; /* เพิ่ม padding ด้านบนและล่าง */
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* เงาเบา ๆ */
+}
+
+header h1 {
+    font-size: 3rem; /* ขนาดตัวอักษรใหญ่ */
+    margin: 0; /* ไม่ให้มี margin */
+    font-weight: 600; /* ความหนาของตัวอักษร */
+}
+
+header p {
+    font-size: 1.2rem; /* ขนาดตัวอักษรของพารากราฟ */
+}
+
+@media (max-width: 2000px) {
+    header p {
+        font-size: 2.0rem; /* ขนาดตัวอักษรใน header สำหรับหน้าจอเล็ก */
+    }
+}
+
+nav {
+    background-color: transparent; /* ทำให้พื้นหลังโปร่งใส */
+    padding: 10px 0; /* เพิ่ม padding */
+    margin: 20px 0; /* ระยะห่าง */
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px; /* ระยะห่างระหว่างลิงก์ */
+    text-decoration: none; /* ไม่ให้มีขีดเส้นใต้ */
+    color: #003d7a; /* สีน้ำเงินเข้ม */
+    font-weight: 500; /* ความหนาของตัวอักษร */
+}
+
+nav a:hover {
+    color: #0056b3; /* เปลี่ยนสีเมื่อ hover */
+}
+
+section {
+    padding: 40px; /* Padding รอบ ๆ ส่วน */
+    width: 90%; /* กำหนดความกว้างเป็น 90% ของหน้าจอ */
+    max-width: 2000px; /* ความกว้างสูงสุด */
+    margin: 20px auto; /* ระยะห่างด้านบนและล่าง */
+    border-radius: 8px; /* มุมโค้ง */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* เงาเบา ๆ */
+    background-color: #ffffff; /* พื้นหลังสีขาว */
+}
+
+
+footer {
+    background: #0056b3; /* สีน้ำเงินเข้ม */
+    color: white;
+    padding: 20px; /* Padding รอบ ๆ Footer */
+    text-align: center; /* จัดกลางข้อความ */
+}
+
+.project {
+    margin-bottom: 40px; /* ระยะห่างด้านล่าง */
+    padding: 30px; /* Padding รอบ ๆ Project */
+    border-radius: 5px; /* มุมโค้ง */
+    background: #e9ecef; /* พื้นหลังสีเทาอ่อน */
+    transition: transform 0.3s; /* การเปลี่ยนแปลงเมื่อ hover */
+}
+
+.project:hover {
+    transform: scale(1.02); /* ขยายเมื่อ hover */
+}
+
+.icon {
+    display: inline-block; /* แสดงเป็นบล็อก */
+    padding: 10px 20px; /* Padding รอบ ๆ Icon */
+    background-color: #0056b3; /* สีน้ำเงินเข้ม */
+    color: white; /* สีตัวอักษร */
+    text-decoration: none; /* ไม่ให้มีขีดเส้นใต้ */
+    border-radius: 5px; /* มุมโค้ง */
+    cursor: pointer; /* เปลี่ยนเป็น pointer เมื่อ hover */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+    transition: background-color 0.3s; /* การเปลี่ยนแปลงเมื่อ hover */
+}
+
+.icon:hover {
+    background-color: #0056b3; /* สีเมื่อ hover */
+}
+
+h2, h3 {
+    color: #0056b3; /* สีน้ำเงินเข้มสำหรับหัวข้อ */
+    font-weight: 600; /* ความหนาของตัวอักษร */
+}
+
+.about-content {
+    display: flex; /* ใช้ Flexbox สำหรับการจัดเรียง */
+    justify-content: space-between; /* จัดเรียงให้ข้อความอยู่ด้านซ้ายและรูปภาพอยู่ด้านขวา */
+    align-items: flex-start; /* จัดเรียงให้เริ่มต้นจากด้านบน */
+    flex-wrap: wrap; /* ทำให้ข้อความและรูปภาพสามารถแตกบรรทัดได้ */
+}
+
+.about-text {
+    flex: 1 1 60%; /* ให้พื้นที่ข้อความ 60% */
+    margin-right: 20px; /* เพิ่มระยะห่างระหว่างข้อความกับรูปภาพ */
+}
+
+.about-images {
+    display: flex; /* ใช้ Flexbox สำหรับรูปภาพ */
+    flex-wrap: wrap; /* ให้รูปภาพสามารถแตกบรรทัดได้ */
+    justify-content: flex-end; /* จัดเรียงรูปภาพไปที่ด้านขวา */
+    gap: 20px; /* ระยะห่างระหว่างรูปภาพ */
+    flex: 1 1 35%; /* ให้พื้นที่รูปภาพ 35% */
+}
+
+.about-image {
+    flex: 1 1 calc(25% - 20px); /* สามารถแสดง 4 รูปในแต่ละแถว */
+    max-width: calc(25% - 20px); /* กำหนดความกว้างสูงสุด */
+}
+
+.about-image img {
+    width: 100%; /* ทำให้รูปภาพเต็มความกว้างของคอนเทนเนอร์ */
+    height: auto; /* ให้ความสูงปรับตามสัดส่วน */
+    min-height: 150px; /* กำหนดความสูงขั้นต่ำ */
+    object-fit: cover; /* ปรับขนาดให้เต็มพื้นที่โดยไม่ทำให้บิดเบือน */
+    border-radius: 5px; /* เพิ่มมุมโค้งให้กับรูปภาพ */
+}
+
+/* Media Queries เพื่อปรับจำนวนรูปภาพตามขนาดหน้าจอ */
+@media (max-width: 1200px) {
+    .about-image {
+        flex: 1 1 calc(33.33% - 20px); /* 3 รูปในแต่ละแถว */
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .about-image {
+        flex: 1 1 calc(50% - 20px); /* 2 รูปในแต่ละแถว */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .about-image {
+        flex: 1 1 100%; /* 1 รูปในแต่ละแถว */
+        max-width: 100%;
+    }
+}
+
+/* Media Queries เพื่อปรับตำแหน่ง */
+@media (max-width: 1000px) {
+    .about-content {
+        flex-direction: column; /* เปลี่ยนการจัดเรียงเป็นแนวตั้ง */
+    }
+    .about-text {
+        margin-right: 0; /* ลบระยะห่างขวาเมื่ออยู่ในแนวตั้ง */
+    }
+    .about-images {
+        justify-content: center; /* จัดรูปภาพกลางในแนวตั้ง */
+    }
+}
+
+
+p, ul {
+    margin-top: 5px; /* ลดระยะห่าง */
+}
+
+.project a {
+    color: #0056b3; /* สีน้ำเงินเข้ม */
+    text-decoration: none; /* ไม่ให้มีเส้นใต้ */
+}
+
+.project a:hover {
+    color: #0065d1; /* เปลี่ยนสีข้อความเมื่อ hover */
+}
+
+.read-more-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: transparent; /* สีพื้นหลังโปร่งใส */
+    color: #0056b3; /* สีน้ำเงินเข้มที่เข้ากับธีม */
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    font-weight: 600; /* ความหนาของตัวอักษร */
+    border: 2px solid #0056b3; /* เส้นขอบสีเดียวกับตัวอักษร */
+    border-radius: 25px; /* มุมโค้งที่ดูเป็นธรรมชาติ */
+    transition: all 0.3s ease; /* การเปลี่ยนแปลงเมื่อ hover */
+    font-size: 0.9rem; /* ขนาดตัวอักษร */
+}
+
+.read-more-button:hover {
+    color: #ffffff; /* สีตัวอักษรเมื่อ hover */
+    transform: translateY(-2px); /* ขยับขึ้นเล็กน้อย */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาเพื่อเพิ่มมิติ */
+}
+
+
+
+/* Contact Section */
+#contact ul.contact-list {
+    list-style: none; /* ไม่ต้องการ bullet points */
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+#contact ul.contact-list li {
+    margin-bottom: 10px; /* ระยะห่างระหว่างข้อมูล */
+}
+
+#contact ul.contact-list a {
+    color: #0056b3; /* สีของลิงก์ */
+    text-decoration: none; /* ไม่ให้มีเส้นใต้ */
+    font-weight: 500;
+}
+
+#contact ul.contact-list a:hover {
+    color: #003d7a; /* สีเมื่อ hover */
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0056b3; /* สีพื้นหลังของปุ่ม */
+    color: white; /* สีตัวอักษร */
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    border-radius: 5px; /* เพิ่มมุมโค้งให้กับปุ่ม */
+    font-weight: 500; /* เพิ่มความหนาของตัวอักษร */
+    transition: color 0.3s, transform 0.3s; /* ใส่การเปลี่ยนสีตัวอักษรและขนาด */
+}
+
+.back-button:hover {
+    color: #ffcc00; /* สีตัวอักษรเมื่อ hover */
+    transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* พื้นหลังสีอ่อน */
+}
+
+header {
+    background: #0056b3; /* สีน้ำเงินเข้ม */
+    color: white;
+    padding: 60px 0; /* เพิ่ม padding ด้านบนและล่าง */
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* เงาเบา ๆ */
+}
+
+header h1 {
+    font-size: 3rem; /* ขนาดตัวอักษรใหญ่ */
+    margin: 0; /* ไม่ให้มี margin */
+    font-weight: 600; /* ความหนาของตัวอักษร */
+}
+
+header p {
+    font-size: 1.2rem; /* ขนาดตัวอักษรของพารากราฟ */
+}
+
+nav {
+    background-color: transparent; /* ทำให้พื้นหลังโปร่งใส */
+    padding: 10px 0; /* เพิ่ม padding */
+    margin: 20px 0; /* ระยะห่าง */
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px; /* ระยะห่างระหว่างลิงก์ */
+    text-decoration: none; /* ไม่ให้มีขีดเส้นใต้ */
+    color: #003d7a; /* สีน้ำเงินเข้ม */
+    font-weight: 500; /* ความหนาของตัวอักษร */
+}
+
+nav a:hover {
+    color: #0056b3; /* เปลี่ยนสีเมื่อ hover */
+}
+
+section {
+    padding: 40px; /* Padding รอบ ๆ ส่วน */
+    width: 90%; /* กำหนดความกว้างเป็น 90% ของหน้าจอ */
+    max-width: 2000px; /* ความกว้างสูงสุด */
+    margin: 20px auto; /* ระยะห่างด้านบนและล่าง */
+    border-radius: 8px; /* มุมโค้ง */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* เงาเบา ๆ */
+    background-color: #ffffff; /* พื้นหลังสีขาว */
+}
+
+footer {
+    background: #0056b3; /* สีน้ำเงินเข้ม */
+    color: white;
+    padding: 20px; /* Padding รอบ ๆ Footer */
+    text-align: center; /* จัดกลางข้อความ */
+}
+
+.popup-overlay {
+    display: none; /* ซ่อน overlay โดยค่าเริ่มต้น */
+    position: fixed; /* ใช้ fixed positioning */
+    top: 0;
+    right: 0;
+    width: 100%; /* ให้เต็มหน้าจอ */
+    height: 100%; /* ให้เต็มหน้าจอ */
+    background-color: rgba(0, 0, 0, 0.8); /* พื้นหลังมืดพร้อมความโปร่งแสง */
+    justify-content: flex-end; /* จัดกลาง */
+    align-items: center; /* จัดกลาง */
+}
+
+.popup-content {
+    position: relative; /* ใช้ relative positioning */
+    max-width: 80%; /* กำหนดความกว้างสูงสุดที่ 80% */
+    max-height: 80%; /* กำหนดความสูงสูงสุดที่ 80% */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกิน */
+}
+
+.popup-content img {
+    width: 30%; /* ปรับให้ภาพเต็มพื้นที่ของ Pop-up */
+    height: auto; /* ให้ความสูงอัตโนมัติ */
+    max-height: 30%; /* กำหนดความสูงสูงสุดที่ 100% ของ Pop-up */
+    object-fit: contain; /* ทำให้ภาพปรับขนาดโดยรักษาอัตราส่วน */
+}
+
+
+

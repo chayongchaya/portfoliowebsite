@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulchaya Paipinij - EQ18 Camp</title>
+    <link rel="stylesheet" href="styles.css"> <!-- เชื่อมโยงไฟล์ CSS -->
+</head>
+<body>
+
+    <header>
+        <h1>Kulchaya Paipinij</h1>
+        <p>Welcome to my portfolio</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section>
+        <h2>EaZy Life Project</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>For my IoT project, I created “EaZy LIFE,” an innovative solution aimed at addressing some of the common issues that people face with home automation systems, with a particular focus on convenience, cost-saving, and user accessibility. The inspiration behind EaZy LIFE was to bring a practical solution that not only improves the daily lives of users but also makes smart home technology more efficient and accessible. By integrating several types of sensors and using effective data processing and visualization tools, this project provided valuable insights into the potential of IoT for smart home applications.</p>
+                <p>EaZy LIFE incorporates three main sensors: the ultrasonic module, the rain sensor module, and the DHT11 module. Each sensor has a distinct role in enhancing the functionality of the smart home environment. The ultrasonic module is used for motion detection, allowing it to monitor certain areas for movement, which could be utilized for lighting control or security purposes. The rain sensor module detects rainfall, which is particularly useful for controlling windows or irrigation systems, ensuring that they operate efficiently in response to weather conditions. The DHT11 module, which measures temperature and humidity, helps in controlling the home’s indoor climate and can assist in regulating fans or HVAC systems based on real-time environmental data.</p>
+                <p>In addition to these sensors, I included LED lights and a servo motor to simulate essential home functions, specifically lighting and door systems. The LEDs represent lighting control, where they can be adjusted based on environmental or user-input data, while the servo motor acts as a prototype for automated door control, responding to commands that simulate opening and closing. Together, these components provide a basic yet effective simulation of a smart home, demonstrating how different systems can work in harmony to improve both comfort and energy efficiency within a household.</p>
+                <p>The project is powered by an ESP32 board, which plays a central role in managing the sensors and handling data communication. The ESP32 is configured to send and receive data from each sensor, relaying this information to Node-RED, a flow-based development tool used for visualizing IoT data. Node-RED is used to create a real-time dashboard that mimics an application interface, allowing users to monitor sensor data, interact with the system, and control the simulated home environment. This dashboard was designed to be user-friendly and visually engaging, enabling users to check system statuses and receive updates on various conditions in their home.</p>
+                <p>Although the project was successfully implemented and could perform the intended functions, there were several areas for improvement that surfaced during testing. For instance, safety considerations need to be enhanced, especially concerning real-time control of physical systems like doors. Additionally, color schemes on the dashboard require optimization to clearly represent system statuses, making it easier for users to understand the conditions at a glance. During testing, I noticed occasional issues with real-time data display, where sensor data updates were slightly delayed. This issue was likely due to internet connectivity constraints, which can impact the responsiveness of IoT systems that rely on cloud-based communication.</p>
+                <p>Reflecting on this project, I am proud of the progress made and the functional prototype that resulted. Despite the challenges, EaZy LIFE demonstrated the potential for IoT to create meaningful improvements in everyday life. The experience also highlighted the importance of continuous refinement and testing to address issues like connectivity and safety, as well as user interface design to enhance usability. Overall, working on this project gave me hands-on experience with IoT technology, sensor integration, and data visualization, and reinforced the importance of optimizing both the technical and user experience aspects of IoT systems for practical applications.</p>
+            </div>
+            <div class="about-images">
+                <div class="about-image">
+                    <img src="ce1.jpg" alt="Students participating in the camp">
+                </div>
+                <div class="about-image">
+                    <img src="ce2.jpg" alt="Students participating in the camp">
+                </div>
+                <div class="about-image">
+                    <img src="ce8.jpg" alt="Students participating in the camp">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kulchaya Paipinij. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
